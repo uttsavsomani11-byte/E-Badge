@@ -20,16 +20,20 @@
       padding: 10px 20px;
       background-color: black;
       border-bottom: 2px solid gold;
+      flex-wrap: wrap; /* Allow wrapping on mobile */
     }
 
     /* Logo */
     .logo {
       display: flex;
       align-items: center;
+      max-width: 40%; /* prevent logo from taking full width */
     }
 
     .logo img {
-      height: 60px; /* Adjust logo height */
+      height: 50px; /* smaller logo */
+      width: auto; /* keep proportions */
+      object-fit: contain;
       margin-right: 20px;
     }
 
@@ -37,6 +41,7 @@
     nav {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap; /* wrap on smaller screens */
     }
 
     nav a {
@@ -53,7 +58,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: calc(100vh - 80px); /* Adjust for header height */
+      min-height: calc(100vh - 80px); /* header height */
       text-align: center;
     }
 
@@ -74,8 +79,15 @@
         align-items: flex-start;
       }
       nav {
-        gap: 10px;
         margin-top: 10px;
+        gap: 10px;
+      }
+      .logo {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+      .logo img {
+        height: 40px;
       }
     }
   </style>
