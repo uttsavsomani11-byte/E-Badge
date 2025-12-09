@@ -1,80 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Portal</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: black;
-      color: gold;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111; /* black */
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* HEADER BAR */
-    header {
-      width: 100%;
-      background: black;
-      border-bottom: 2px solid gold;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 15px;
-      box-sizing: border-box;
-    }
+        /* TOP BAR */
+        .header {
+            background: #000;
+            border-bottom: 2px solid #b8860b; /* gold */
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            height: 95px;
+        }
 
-    /* 🚨 FINAL FIX: FORCE LOGO TO BE TINY 🚨 */
-    .logo img {
-      width: 100px !important;   /* exact tiny size */
-      height: 100px !important;  /* exact tiny size */
-      object-fit: contain;
-      display: block;
-    }
+        /* LOGO LEFT SIDE */
+        .logo-box {
+            width: 90px;
+            height: 70px;
+            border: 2px dashed #b8860b;
+            border-radius: 10px;
+            background: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #b8860b;
+            font-size: 12px;
+            margin-right: 15px;
+        }
 
-    /* NAVIGATION */
-    nav {
-      display: flex;
-      gap: 20px;
-    }
+        /* NAV BUTTONS */
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
 
-    nav a {
-      color: gold;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-    }
+        .nav span {
+            font-size: 15px;
+            font-weight: bold;
+            color: #ffcc66;
+        }
 
-    /* MAIN CONTENT */
-    .content {
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
+        /* MAIN CONTENT */
+        .content {
+            padding: 10px 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        h1 {
+            font-size: 20px;
+            color: #ffcc66;
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        /* THICK ROWS */
+        .section {
+            background: #1a1a1a;
+            border: 2px solid #b8860b;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 16px;
+            min-height: 80px; /* thick row */
+        }
+
+        .section h2 {
+            color: #ffcc66;
+            margin: 0 0 5px 0;
+        }
+
+        .section p {
+            color: #e8d9a3;
+            margin: 2px 0;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-  </div>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo-box">Logo</div>
+        <div class="nav">
+            <span>Home</span>
+            <span>About</span>
+            <span>Contact</span>
+        </div>
+    </div>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact Us</a>
-  </nav>
-</header>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>Welcome to Your School Portal</h1>
 
-<!-- MAIN PAGE CONTENT -->
-<div class="content">
-  <h1>Welcome</h1>
-  <p>This is the main page. You can edit anything you want here.</p>
-</div>
+        <div class="section">
+            <h2>About Us</h2>
+            <p>Add your about info here. You can edit this freely.</p>
+        </div>
+
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p><b>Email:</b> example@gmail.com</p>
+            <p><b>Phone:</b> +91 XXXXXXXXXX</p>
+        </div>
+    </div>
 
 </body>
 </html>
-
