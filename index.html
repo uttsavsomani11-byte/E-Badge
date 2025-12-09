@@ -23,21 +23,21 @@
             display: flex;
             align-items: center;
             padding: 10px;
-            height: 95px;
+            height: 95px; /* stays normal */
         }
 
-        /* LOGO AREA (bigger + no border) */
+        /* FIXED LOGO AREA */
         .logo-box {
-            width: 190px;   /* increased */
-            height: 200px;   /* increased */
+            width: 90px;  
+            height: 70px;  
             display: flex;
             justify-content: center;
             align-items: center;
             margin-right: 20px;
-            overflow: hidden;
+            overflow: hidden; /* Clean crop, no overflow */
         }
 
-        /* LOGO IMAGE */
+        /* LOGO IMAGE (auto-fits the new box) */
         .logo-box img {
             height: 100%;
             width: auto;
@@ -128,11 +128,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
