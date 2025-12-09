@@ -9,7 +9,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #111; /* black */
+            background: #111;
             color: white;
             height: 100vh;
             display: flex;
@@ -19,14 +19,14 @@
         /* TOP BAR */
         .header {
             background: #000;
-            border-bottom: 2px solid #b8860b; /* gold */
+            border-bottom: 2px solid #b8860b;
             display: flex;
             align-items: center;
             padding: 10px;
             height: 95px;
         }
 
-        /* LOGO LEFT SIDE */
+        /* LOGO BOX (Exact size you wanted) */
         .logo-box {
             width: 90px;
             height: 70px;
@@ -36,9 +36,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #b8860b;
-            font-size: 12px;
             margin-right: 15px;
+            overflow: hidden; /* prevents ANY overflow */
+        }
+
+        /* LOGO IMAGE — forced to fit inside box */
+        .logo-box img {
+            height: 100%;
+            width: auto;      /* keeps proportions */
+            object-fit: contain;
         }
 
         /* NAV BUTTONS */
@@ -78,7 +84,7 @@
             margin-bottom: 10px;
             text-align: left;
             font-size: 16px;
-            min-height: 80px; /* thick row */
+            min-height: 80px;
         }
 
         .section h2 {
@@ -97,7 +103,10 @@
 
     <!-- HEADER -->
     <div class="header">
-        <div class="logo-box">Logo</div>
+        <div class="logo-box">
+            <img src="logo.png" alt="Logo">
+        </div>
+
         <div class="nav">
             <span>Home</span>
             <span>About</span>
